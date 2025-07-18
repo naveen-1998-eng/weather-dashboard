@@ -1,0 +1,29 @@
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px; /* Space between tiles */
+}
+
+.grid-item {
+    flex: 1 1 100%; /* Default to full width */
+    margin: 0.5em;
+}
+
+.grid-item-half {
+    flex: 1 1 calc(50% - 25px); /* Half width with spacing adjustment */
+    margin: 0.5em;
+    margin-bottom: 0.8em; /* Add bottom margin for spacing */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for tile effect */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+}
+
+@media (max-width: 960px) {
+    /* For medium screens and below */
+    .grid-item-half {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+}
